@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 @app.route("/calculate-average")
 def calculate_average():
-    file_path = "/Users/valeriypilyaev/Desktop/Python_Pro/Python_Pro_HW/Python_Pro_HW/HW_2/hw.csv"
-    with open(file_path, 'r') as file:
+    relative_path = "hw.csv"
+    with open(relative_path, 'r') as file:
         reader = csv.DictReader(file)
         reader.fieldnames = [field.strip() for field in reader.fieldnames]
         data = [row for row in reader]
