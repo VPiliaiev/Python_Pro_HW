@@ -1,4 +1,3 @@
-
 from flask import Flask
 import random
 import string
@@ -17,6 +16,7 @@ def generate_password():
     ]
     symbols = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
     password += [random.choice(symbols) for i in range(length - 4)]
+    random.shuffle(password)
     password = ''.join(password)
     return password
 
