@@ -7,7 +7,7 @@ name = "pypi"
 flask = "*"
 faker = "*"
 ipython = "*"
-
+requests = "*"
 
 [dev-packages]
 
